@@ -8,7 +8,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/electron-hero-apps/starter.git"
+        "url": "https://github.com/electron-hero-apps/starter"
     },
     "keywords": [
         "electron-hero",
