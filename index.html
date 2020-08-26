@@ -7,13 +7,15 @@
 </head>
 
 <script>
-    window.$ = window.jQuery = require('jquery');
+    const ipc = require('electron').ipcRenderer
+    let nodeRequirePath = ipc.sendSync('getRequirePath') + 'node_modules/';
+    window.$ = window.jQuery = require(nodeRequirePath + 'jquery');
+    var path = require(nodeRequirePath + 'path');
+    var fs = require('fs');
+    var _ = require(nodeRequirePath + 'lodash');
 </script>
 
 <body>
-
-
-
     <div class="window">
         <div class="window-content">
             <div class="pane-group">
@@ -25,9 +27,6 @@
             <h1 class="title">Footer</h1>
         </footer>
     </div>
-
-
-
 </body>
 
 </html>
